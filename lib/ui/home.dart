@@ -1,5 +1,5 @@
-import 'package:flutter_web/material.dart';
-import 'package:portfolio/constants/assets.dart';
+import 'package:flutter/widgets.dart';
+ import 'package:portfolio/constants/assets.dart';
 import 'package:portfolio/constants/fonts.dart';
 import 'package:portfolio/constants/strings.dart';
 import 'package:portfolio/constants/text_styles.dart';
@@ -7,7 +7,9 @@ import 'package:portfolio/models/education.dart';
 import 'package:portfolio/utils/screen/screen_utils.dart';
 import 'package:portfolio/widgets/responsive_widget.dart';
 import 'dart:html' as html;
-
+ import 'package:flutter/material.dart';
+ 
+ 
 class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -29,7 +31,7 @@ class HomePage extends StatelessWidget {
   }
 
   //AppBar Methods:-------------------------------------------------------------
-  Widget _buildAppBar(BuildContext context) {
+  AppBar _buildAppBar(BuildContext context) {
     return AppBar(
       titleSpacing: 0.0,
       title: _buildTitle(),
@@ -101,7 +103,7 @@ class HomePage extends StatelessWidget {
               children: _buildActions(),
             ),
           )
-        : null;
+        : SizedBox();
   }
 
   //Screen Methods:-------------------------------------------------------------
